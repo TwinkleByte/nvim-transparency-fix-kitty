@@ -3,8 +3,8 @@
 # Path to the actual kitty.conf file
 KITTY_CONF="$HOME/.config/kitty/kitty.conf"
 
-# Comment out background_opacity in kitty.conf
-sed -i '/background_opacity/s/^/#/' "$KITTY_CONF"
+# Comment background_opacity in kitty.conf, but only if it's not already commented
+sed -i '/background_opacity/ { /^#/! s/^/#/ }' "$KITTY_CONF"
 
 # Reload kitty config
 kitty @ load-config
@@ -13,7 +13,7 @@ kitty @ load-config
 nvim
 
 # Uncomment background_opacity in kitty.conf after exiting nvim
-sed -i '/background_opacity/s/^#//' "$KITTY_CONF"
+sed -i '/background_opacity/ { /^#/ s/^#// }' "$KITTY_CONF"
 
 # Reload kitty config again
 kitty @ load-config
