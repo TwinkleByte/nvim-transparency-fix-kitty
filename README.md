@@ -47,8 +47,7 @@ end
 source ~/.config/fish/config.fish
 ```
 
-Test it out by using nvim ~/.bashrc or smth
-
 # FAQ
-Kitty's background color turned solid. WHat do I do?
-Its possible you closed kitty directly without closing Nvim. You didn't exit Nvim using :qa or wq or q!. Run `nvim` again and quit `nvim` to fix it. 
+
+**Q:** Kitty's background color turned solid. What do I do?  
+**A:** It's possible you closed Kitty directly without quitting Nvim. You didn't exit Nvim using `:qa`, `:wq`, or `:q!`. Run `nvim` again and quit Nvim properly to fix it.
