@@ -9,8 +9,13 @@ sed -i '/background_opacity/ { /^#/! s/^/#/ }' "$KITTY_CONF"
 # Reload kitty config
 kitty @ load-config
 
-# Launch nvim
-nvim
+# Check if a file path is provided, and open that file in nvim
+if [ -n "$1" ]; then
+  nvim "$1"
+else
+  # Otherwise, launch nvim without a file
+  nvim
+fi
 
 # Uncomment background_opacity in kitty.conf after exiting nvim
 sed -i '/background_opacity/ { /^#/ s/^#// }' "$KITTY_CONF"
