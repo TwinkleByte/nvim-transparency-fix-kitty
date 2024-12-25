@@ -17,7 +17,7 @@ chmod +x ./kitty-nvim-transparency.sh
 
 ### 3. **Modify Shell Configuration**
 You'll need to modify your shell configuration file to create an alias for `nvim` that runs the script instead.
-I'm using ~/.local/bin/ as the directory where the script resides for the example. Put the path where you put the script in the following commands.
+* I'm using ~/.local/bin/ as the directory where the script resides for the example. Put the path where you put the script in the following commands.
 
 #### **For Bash** (`~/.bashrc`):
 Open `~/.bashrc` with editor and put this:
